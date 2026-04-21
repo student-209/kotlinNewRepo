@@ -1,0 +1,40 @@
+package com.example.contactapp
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+
+class ContactAdapter( val contacts: ArrayList<Contact>) :
+    RecyclerView.Adapter<ContactAdapter.ViewHolder>() {
+
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val ivAvatar: ImageView = itemView.findViewById(R.id.ivAvatar)
+        val tvName: TextView = itemView.findViewById(R.id.tvName)
+        val tvPhone: TextView = itemView.findViewById(R.id.tvPhone)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.cardsview, parent, false)
+        return ViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val contact = contacts[position]
+        holder.tvName.text = contact.name
+        holder.tvPhone.text = contact.phone
+        holder.ivAvatar.setImageResource(contact.avatarResId)
+    }
+
+    override fun getItemCount(): Int = contacts.size
+
+    // Method to update data dynamically (Active Adapter feature)
+    fun updateContacts(newContacts: List<Contact>) {
+        contacts.clear()
+        contacts.addAll(newContacts)
+        notifyDataSetChanged()
+    }
+}
