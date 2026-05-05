@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter text here"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your text will appear here"
+        android:textSize="22sp"
+        android:padding="12dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose text case"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupCase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+
+        <RadioButton
+            android:id="@+id/radioUppercase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uppercase"/>
+
+        <RadioButton
+            android:id="@+id/radioLowercase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lowercase"/>
+
+        <RadioButton
+            android:id="@+id/radioredcolor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Redcolor"/>
+
+        <RadioButton
+            android:id="@+id/radiobluecolor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bluecolor"/>
+
+
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose text style"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <CheckBox
+        android:id="@+id/checkBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bold" />
+
+    <CheckBox
+        android:id="@+id/checkItalic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Italic" />
+
+    <Button
+        android:id="@+id/btnApply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:layout_marginTop="24dp"/>
+</LinearLayout>
